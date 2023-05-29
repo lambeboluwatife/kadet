@@ -1,38 +1,290 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500");
+@import url("https://fonts.googleapis.com/css2?family=Chokokutai&display=swap");
+
+li,
+a,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: darkgray;
+  text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 15px 10%;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  cursor: pointer;
+  font-family: "Chokokutai", sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: bisque;
+}
+
+header button {
+  padding: 9px 25px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  color: #fff;
+}
+
+button:hover {
+  background-color: bisque;
+  border: 1px solid bisque;
+  color: #000;
+}
+
+.showcase {
+  height: 90vh;
+  padding: 5px 10px;
+}
+
+.box-content .content {
+  padding: 50% 0 20px 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.content h1 {
+  font-family: "Chokokutai", sans-serif;
+  font-size: 4rem;
+  color: bisque;
+}
+
+.content h6 {
+  margin-top: 30px;
+  color: darkgray;
+}
+
+.content .contact-btn {
+  margin-top: 10px;
+  border: 1px solid bisque;
+  color: bisque;
+  background: transparent;
+  transition: all 0.3s ease 0s;
+}
+
+.content .contact-btn:hover {
+  background-color: bisque;
+  color: #000;
+}
+
+.showcase a {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px;
+  margin: 0 5px;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.collections {
+  margin: 1rem 3rem;
+}
+
+.box {
+  height: 90vh;
+  position: relative;
+}
+
+.item {
+  height: 17.5em;
+  width: 17em;
+  background: #000;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.item-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.item:hover .item-image {
+  opacity: 0.7;
+}
+
+.item-container button {
+  padding: 10px;
+  color: #000;
+  background-color: transparent;
+  border: 1px solid #000;
+}
+
+.item-container button:hover {
+  border: 1px solid bisque;
+  color: bisque;
+}
+
+.img-text h1 {
+  position: absolute;
+  bottom: 8px;
+  right: 5px;
+  color: #fff;
+  margin-right: 10px;
+  font-family: "Chokokutai", sans-serif;
+  font-size: 4rem;
+  color: bisque;
+  position: fixed;
+}
+
+.collections a {
+  text-decoration: none;
+  color: bisque;
+}
+
+.collections a:hover {
+  color: #fff;
+}
+
+.grid-4 h6 {
+  margin-top: 0.5rem;
+}
+
+.necklaces {
+  padding: 0.5rem 0;
+}
+
+.order {
+  border: 1px #000 solid;
+  border-radius: 5px;
+  text-align: center;
+  padding: 1rem;
+  background-color: bisque;
+  color: #000;
+  top: 15%;
+  left: 20%;
+  position: fixed;
+  cursor: default;
+}
+
+.order h3 {
+  display: inline;
+}
+
+.order h6 {
+  float: right;
+}
+
+.order h6:hover {
+  color: #fff;
+}
+
+form {
+  display: block;
+  margin-top: 1rem;
+}
+
+input {
+  padding: 15px;
+  border: solid #000 1px;
+  background-color: transparent;
+  color: #000;
+  font-family: "Lato", sans-serif;
+  width: 30rem;
+  margin-bottom: 10px;
+}
+
+.submit {
+  cursor: pointer;
+}
+
+.submit:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+input:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+.hidden {
+  visibility: hidden;
+  height: 0;
+}
+
+/* Tablets and under */
+@media (max-width: 768px) {
+  .grid,
+  .showcase .grid,
+  .contact .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
-  to {
-    transform: rotate(360deg);
+
+  .collections .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .showcase {
+    padding: 0 5px;
+  }
+
+  .box {
+    display: none;
+  }
+
+  .box-content {
+    background-image: url(../src/images/backdrop.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+  }
+
+  .img-text h1 {
+    font-size: 3rem;
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .container {
+    max-width: 500px;
+  }
+
+  .collections .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .box-content .content {
+    padding: 35% 0 20px 20px;
+  }
+
+  .img-text h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 320px) {
+  .grid-4 h6 {
+    margin-left: 1.5rem;
   }
 }
