@@ -12,6 +12,11 @@ const App = () => {
   const [items] = useState(data);
   const [order, setOrder] = useState(false);
   const [itemToOrder, setItemToOrder] = useState();
+  const [dropdown, setDropdown] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdown(!dropdown);
+  };
 
   const selectOrder = (id) => {
     setOrder(!order);
@@ -23,7 +28,7 @@ const App = () => {
   };
   return (
     <Router>
-      <Header />
+      <Header dropdown={dropdown} toggleDropdown={toggleDropdown} />
       {order && <Order itemToOrder={itemToOrder} onClose={closeOrder} />}
       <Routes>
         <Route
