@@ -21,6 +21,7 @@ header {
 .logo {
   cursor: pointer;
   font-family: "Chokokutai", sans-serif;
+  color: bisque;
 }
 
 .nav-links {
@@ -226,6 +227,50 @@ input:focus {
   height: 0;
 }
 
+.menu {
+  color: bisque;
+  font-size: 25px;
+  display: none;
+}
+
+.dropdown-menu {
+  display: none;
+  right: 2rem;
+  top: 60px;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu li {
+  list-style: none;
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-menu .cta {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: bisque;
+  padding: 10px;
+}
+
+.cta button {
+  background: none;
+  border: none;
+  color: #000;
+}
+
+.cta:hover {
+  background-color: #fff;
+}
+
 /* Tablets and under */
 @media (max-width: 768px) {
   .grid,
@@ -237,6 +282,10 @@ input:focus {
 
   .collections .grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  header {
+    padding: 5px 5%;
   }
 
   .showcase {
@@ -260,6 +309,25 @@ input:focus {
     right: 20px;
     bottom: 20px;
   }
+
+  .menu {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .dropdown-menu {
+    display: block;
+    left: 2rem;
+    width: unset;
+    margin: 0 10px 10px;
+  }
+
+  .header-btn {
+    display: none;
+  }
 }
 
 /* Mobile */
@@ -280,11 +348,26 @@ input:focus {
   .img-text h1 {
     font-size: 2.5rem;
   }
+
+  .menu {
+    margin-right: 10px;
+  }
+
+  .dropdown-menu {
+    left: 2rem;
+    width: unset;
+    margin: 0 10px 10px;
+  }
 }
 
 /* Mobile */
 @media (max-width: 320px) {
   .grid-4 h6 {
-    margin-left: 1.5rem;
+    margin-left: 2rem;
+  }
+
+  .dropdown-menu {
+    left: 2rem;
+    width: unset;
   }
 }
