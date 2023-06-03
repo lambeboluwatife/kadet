@@ -14,16 +14,16 @@ const Header = ({ dropdown, toggleDropdown }) => {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/">Earrings</a>
+              <a href="/earrings">Earrings</a>
             </li>
             <li>
-              <a href="/">Necklaces</a>
+              <a href="/necklaces">Necklaces</a>
             </li>
             <li>
-              <a href="/">Chains</a>
+              <a href="/chains">Chains</a>
             </li>
             <li>
-              <a href="/">Lip Glosses</a>
+              <a href="/lipglosses">Lip Glosses</a>
             </li>
           </ul>
         </nav>
@@ -44,16 +44,16 @@ const Header = ({ dropdown, toggleDropdown }) => {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/">Earrings</a>
+              <a href="/earrings">Earrings</a>
             </li>
             <li>
-              <a href="/">Necklaces</a>
+              <a href="/necklaces">Necklaces</a>
             </li>
             <li>
-              <a href="/">Chains</a>
+              <a href="/chains">Chains</a>
             </li>
             <li>
-              <a href="/">Lip Glosses</a>
+              <a href="/lipglosses">Lip Glosses</a>
             </li>
           </ul>
           <a href="/" className="cta">

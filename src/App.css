@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:500");
 @import url("https://fonts.googleapis.com/css2?family=Chokokutai&display=swap");
 
+:root {
+  --primary-color: bisque;
+}
+
 li,
 a,
 button {
@@ -21,7 +25,7 @@ header {
 .logo {
   cursor: pointer;
   font-family: "Chokokutai", sans-serif;
-  color: bisque;
+  color: var(--primary-color);
 }
 
 .nav-links {
@@ -38,21 +42,21 @@ header {
 }
 
 .nav-links li a:hover {
-  color: bisque;
+  color: var(--primary-color);
 }
 
 header button {
   padding: 9px 25px;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid var(--primary-color);
   cursor: pointer;
   transition: all 0.3s ease 0s;
-  color: #fff;
+  color: var(--primary-color);
 }
 
 button:hover {
-  background-color: bisque;
-  border: 1px solid bisque;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
   color: #000;
 }
 
@@ -69,7 +73,7 @@ button:hover {
 .content h1 {
   font-family: "Chokokutai", sans-serif;
   font-size: 4rem;
-  color: bisque;
+  color: var(--primary-color);
 }
 
 .content h6 {
@@ -79,14 +83,14 @@ button:hover {
 
 .content .contact-btn {
   margin-top: 10px;
-  border: 1px solid bisque;
-  color: bisque;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
   background: transparent;
   transition: all 0.3s ease 0s;
 }
 
 .content .contact-btn:hover {
-  background-color: bisque;
+  background-color: var(--primary-color);
   color: #000;
 }
 
@@ -135,8 +139,8 @@ button:hover {
 }
 
 .item-container button:hover {
-  border: 1px solid bisque;
-  color: bisque;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 .img-text h1 {
@@ -147,13 +151,13 @@ button:hover {
   margin-right: 10px;
   font-family: "Chokokutai", sans-serif;
   font-size: 4rem;
-  color: bisque;
+  color: var(--primary-color);
   position: fixed;
 }
 
 .collections a {
   text-decoration: none;
-  color: bisque;
+  color: var(--primary-color);
 }
 
 .collections a:hover {
@@ -173,7 +177,7 @@ button:hover {
   border-radius: 5px;
   text-align: center;
   padding: 1rem;
-  background-color: bisque;
+  background-color: var(--primary-color);
   color: #000;
   top: 15%;
   left: 20%;
@@ -228,7 +232,7 @@ input:focus {
 }
 
 .menu {
-  color: bisque;
+  color: var(--primary-color);
   font-size: 25px;
   display: none;
 }
@@ -257,7 +261,7 @@ input:focus {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: bisque;
+  background-color: var(--primary-color);
   padding: 10px;
 }
 
@@ -271,6 +275,56 @@ input:focus {
   background-color: #fff;
 }
 
+.product-showcase {
+  height: 60vh;
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.product-info {
+  margin-top: 20%;
+}
+
+footer {
+  height: 50vh;
+  background-color: var(--primary-color);
+  color: #000;
+}
+
+.footer-details h1 {
+  font-family: "Chokokutai", sans-serif;
+}
+
+.page-links a,
+.social-media a,
+.contact-footer a {
+  color: #000;
+}
+
+.page-links a:hover,
+.social-media a:hover,
+.contact-footer a:hover {
+  color: #fff;
+}
+
+.page-links h3,
+.social-media h6 {
+  margin-top: 1.5rem;
+}
+
+.social-media {
+  border-bottom: 2px solid #000;
+  padding: 20px;
+}
+
+.contact-footer {
+  padding: 20px;
+}
+
 /* Tablets and under */
 @media (max-width: 768px) {
   .grid,
@@ -278,6 +332,10 @@ input:focus {
   .contact .grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+  }
+
+  header {
+    height: 10vh;
   }
 
   .collections .grid {
@@ -328,6 +386,27 @@ input:focus {
   .header-btn {
     display: none;
   }
+
+  .product-showcase {
+    height: 50vh;
+  }
+
+  .product-info {
+    margin-top: 40%;
+  }
+
+  footer {
+    height: 30vh;
+  }
+
+  footer .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page-links h3,
+  .social-media h6 {
+    margin-top: 1rem;
+  }
 }
 
 /* Mobile */
@@ -358,6 +437,48 @@ input:focus {
     width: unset;
     margin: 0 10px 10px;
   }
+
+  .product-showcase {
+    height: 40vh;
+  }
+
+  .product-info {
+    margin-top: 30%;
+  }
+
+  .footer-details h1 {
+    font-size: 1.5rem;
+  }
+
+  .footer-details p {
+    font-size: 0.8rem;
+  }
+
+  .page-links h3,
+  .social-media h6 {
+    margin-top: 0.5rem;
+  }
+
+  .page-links a,
+  .social-media a {
+    font-size: 8px;
+  }
+
+  .social-media {
+    padding: 10px;
+  }
+
+  .contact-footer {
+    padding: 10px;
+  }
+
+  .contact-footer h6 {
+    font-size: 7px;
+  }
+
+  .contact-footer a {
+    font-size: 8px;
+  }
 }
 
 /* Mobile */
@@ -369,5 +490,13 @@ input:focus {
   .dropdown-menu {
     left: 2rem;
     width: unset;
+  }
+
+  .product-showcase {
+    height: 70vh;
+  }
+
+  .product-info {
+    margin-top: 90%;
   }
 }

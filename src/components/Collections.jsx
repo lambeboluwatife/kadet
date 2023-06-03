@@ -1,7 +1,7 @@
-import img1 from "../images/neck 1.jpg";
-import img2 from "../images/neck 2.jpg";
-import img3 from "../images/neck 4.jpg";
-import img4 from "../images/neck 5.webp";
+import earring from "../images/martin-de-arriba-uf_IDewI6iQ-unsplash.jpg";
+import necklace from "../images/allie-pollock-mf4mmrX9BIg-unsplash.jpg";
+import chain from "../images/neck 3.webp";
+import lipGloss from "../images/ashley-piszek-L1iTsUBZYDk-unsplash.jpg";
 import { Link } from "react-router-dom";
 const Collections = () => {
   return (
@@ -12,7 +12,7 @@ const Collections = () => {
       <div className="grid grid-4">
         <div className="">
           <div className="item">
-            <img src={img1} className="item-image" alt="earrings" />
+            <img src={earring} className="item-image" alt="earrings" />
           </div>
           <Link to="/earrings">
             <h6>Earrings &rarr;</h6>
@@ -20,7 +20,7 @@ const Collections = () => {
         </div>
         <div className="">
           <div className="item">
-            <img src={img2} className="item-image" alt="necklaces" />
+            <img src={necklace} className="item-image" alt="necklaces" />
           </div>
           <Link to="/necklaces">
             <h6>Necklaces &rarr;</h6>
@@ -28,18 +28,18 @@ const Collections = () => {
         </div>
         <div className="">
           <div className="item">
-            <img src={img3} className="item-image" alt="bracelets" />
+            <img src={chain} className="item-image" alt="bracelets" />
           </div>
-          <Link to="/bracelets">
-            <h6>Bracelets &rarr;</h6>
+          <Link to="/chains">
+            <h6>Chains &rarr;</h6>
           </Link>
         </div>
         <div className="">
           <div className="item">
-            <img src={img4} className="item-image" alt="lip glosses" />
+            <img src={lipGloss} className="item-image" alt="lip glosses" />
           </div>
-          <Link to="/rings">
-            <h6>Rings &rarr;</h6>
+          <Link to="/lipglosses">
+            <h6>Lip Glosses &rarr;</h6>
           </Link>
         </div>
       </div>
