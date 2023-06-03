@@ -7,6 +7,10 @@ import Necklaces from "./components/Necklaces";
 import Showcase from "./components/Showcase";
 import data from "../src/data/items";
 import Order from "./components/Order";
+import LipGlosses from "./components/LipGlosses";
+import Chains from "./components/Chains";
+import Earrings from "./components/Earrings";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [items] = useState(data);
@@ -44,7 +48,20 @@ const App = () => {
           path="/necklaces"
           element={<Necklaces onOrder={selectOrder} items={items} />}
         />
+        <Route
+          path="/lipglosses"
+          element={<LipGlosses onOrder={selectOrder} items={items} />}
+        />
+        <Route
+          path="/chains"
+          element={<Chains onOrder={selectOrder} items={items} />}
+        />
+        <Route
+          path="/earrings"
+          element={<Earrings onOrder={selectOrder} items={items} />}
+        />
       </Routes>
+      <Footer />
     </Router>
   );
 };

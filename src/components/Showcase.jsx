@@ -1,4 +1,4 @@
-import backdrop from "../images/backdrop.png";
+import backdrop from "../images/new-backdrop.jpeg";
 import backdrop2 from "../images/necklace 1.jpg";
 const Showcase = () => {
   return (
