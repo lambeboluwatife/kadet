@@ -2,7 +2,7 @@ const Order = ({ itemToOrder, onClose }) => {
   return (
     <div className="order">
       <h3>Order Form</h3>
-      <h6 onClick={onClose}>Close Modal</h6>
+      <h6 onClick={onClose}>Close</h6>
       <div className="order-form">
         <form action="/order" name="order" method="POST">
           <input type="hidden" name="form-name" value="order" />
