@@ -4,11 +4,13 @@ const item = ({ item, onOrder }) => {
       <div className="item">
         <img src={item.image} className="item-image" alt={item.name} />
       </div>
-      <h4>{item.name}</h4>
-      <h6>{item.price}</h6>
-      <h6 className="order-btn" onClick={() => onOrder(item.id)}>
-        Order Now &rarr;
-      </h6>
+      <div className="item-details">
+        <h4>{item.name}</h4>
+        <h6>{item.price}</h6>
+        <h6 className="order-btn" onClick={() => onOrder(item.id)}>
+          Order Now &rarr;
+        </h6>
+      </div>
     </div>
   );
 };

@@ -10,7 +10,7 @@ const Collections = () => {
         <i>Our Collections</i>
       </h2>
       <div className="grid grid-4">
-        <div className="">
+        <div className="item-list">
           <div className="item">
             <img src={earring} className="item-image" alt="earrings" />
           </div>
@@ -18,7 +18,7 @@ const Collections = () => {
             <h6>Earrings &rarr;</h6>
           </Link>
         </div>
-        <div className="">
+        <div className="item-list">
           <div className="item">
             <img src={necklace} className="item-image" alt="necklaces" />
           </div>
@@ -26,7 +26,7 @@ const Collections = () => {
             <h6>Necklaces &rarr;</h6>
           </Link>
         </div>
-        <div className="">
+        <div className="item-list">
           <div className="item">
             <img src={chain} className="item-image" alt="bracelets" />
           </div>
@@ -34,7 +34,7 @@ const Collections = () => {
             <h6>Chains &rarr;</h6>
           </Link>
         </div>
-        <div className="">
+        <div className="item-list">
           <div className="item">
             <img src={lipGloss} className="item-image" alt="lip glosses" />
           </div>
