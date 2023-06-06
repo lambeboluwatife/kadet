@@ -131,16 +131,17 @@ button:hover {
   opacity: 0.7;
 }
 
-.item-container button {
-  padding: 10px;
-  color: #000;
-  background-color: transparent;
-  border: 1px solid #000;
+.item-container .order-btn {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding: 5px;
+  width: 5rem;
 }
 
-.item-container button:hover {
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
+.item-container .order-btn:hover {
+  cursor: pointer;
+  color: #fff;
+  border-color: #fff;
 }
 
 .img-text h1 {
@@ -387,6 +388,16 @@ footer {
     display: none;
   }
 
+  .order {
+    top: 20%;
+    left: 25%;
+    width: 50%;
+  }
+
+  input {
+    width: 20rem;
+  }
+
   .product-showcase {
     height: 50vh;
   }
@@ -446,6 +457,16 @@ footer {
     margin-top: 30%;
   }
 
+  .order {
+    top: 15%;
+    left: 20%;
+    width: 60%;
+  }
+
+  input {
+    width: 12rem;
+  }
+
   .footer-details h1 {
     font-size: 1.5rem;
   }
@@ -494,6 +515,19 @@ footer {
 
   .product-showcase {
     height: 70vh;
+  }
+
+  .item-container h4 {
+    margin-left: 30px;
+  }
+
+  .order {
+    left: 5%;
+    width: 90%;
+  }
+
+  input {
+    width: 15rem;
   }
 
   .product-info {

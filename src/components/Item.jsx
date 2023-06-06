@@ -6,7 +6,9 @@ const item = ({ item, onOrder }) => {
       </div>
       <h4>{item.name}</h4>
       <h6>{item.price}</h6>
-      <button onClick={() => onOrder(item.id)}>Order Now</button>
+      <h6 className="order-btn" onClick={() => onOrder(item.id)}>
+        Order Now &rarr;
+      </h6>
     </div>
   );
 };
